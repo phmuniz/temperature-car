@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*colors*/
+:root{
+    --footer-color: black;
+    --bg-color: yellow;
+    --text-color: white;
+}
+
+/*general settings*/
+body *{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+body{
+    background: var(--bg-color);
+}
+
+/*top of page*/
+#top{
+    height: 100px;
+    background: var(--footer-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top p{
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 60px;
+}
+
+/*control*/
+#control{
+    height: 700px;
+    width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+}
+
+#right{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#control img:hover{
+    height: 300px;
+    width: 300px;
+}
+
+#left{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#front{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+#back{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+#control img{
+    border-radius: 50%;
+}

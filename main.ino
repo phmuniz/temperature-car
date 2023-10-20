@@ -10,8 +10,8 @@
 #define DEVICE_ID "testando"
 #define DEVICE_CREDENTIAL "&ksGZ9eb+0q!vFQ5"
 
-#define SSID "Fabio Saleme Oi Fibra 2.4Ghz"
-#define SSID_PASSWORD "02050093"
+#define SSID "nome da rede"
+#define SSID_PASSWORD "senha do wifi"
 
 ThingerESP8266 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
 

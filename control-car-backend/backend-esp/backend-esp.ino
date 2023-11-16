@@ -19,8 +19,8 @@
 WebSocketsServer webSocket = WebSocketsServer(81);
 
 // Autenticação wi-fi - Coloque aqui a sua configuração
-const char* ssid     = "2G CASA 2";
-const char* password = "a3b3c3d3e3f3";
+const char* ssid     = "";
+const char* password = "";
 
 // Tratamento de eventos dos dados que vêm do cliente 
 void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght) {

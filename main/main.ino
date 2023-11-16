@@ -1,5 +1,8 @@
 #include <ESP8266WiFi.h>
 #include <WebSocketsServer.h>
+#include <DHT.h> //Biblioteca para funcionamento do sensor de temperatura e umidade DHT11
+#include <ThingerESP8266.h>
+#include <SPI.h>
 
 #define D0    16
 #define D1    5
@@ -16,7 +19,22 @@
 #define MOTOR2_PINO_POS    D4
 #define MOTOR2_PINO_NEG    D5
 
+#define DHTPIN 4 //Pino digital D2 (GPIO4) conectado ao DHT11
+#define DHTTYPE DHT11 //Tipo do sensor DHT11
+
+#define USERNAME "eduardossaleme"
+#define DEVICE_ID "testando"
+#define DEVICE_CREDENTIAL "&ksGZ9eb+0q!vFQ5"
+
+#define SSID "PIC2-2.4G"
+#define SSID_PASSWORD "engcomp@ufes"
+
+
 WebSocketsServer webSocket = WebSocketsServer(81);
+
+ThingerESP8266 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
+
+DHT dht(DHTPIN, DHTTYPE); //Inicializando o objeto dht do tipo DHT passando como parâmetro o pino (DHTPIN) e o tipo do sensor (DHTTYPE)
 
 // Autenticação wi-fi - Coloque aqui a sua configuração
 const char* ssid     = "PIC2-2.4G";
@@ -98,6 +116,17 @@ void setup() {
   webSocket.begin();
   webSocket.onEvent(webSocketEvent);
 
+  thing.add_wifi(SSID, SSID_PASSWORD);
+  pinMode(LED_BUILTIN, OUTPUT);
+  thing["led"] << digitalPin(LED_BUILTIN);
+  thing["millis"] >> outputValue(millis());
+  delay(50); // ?Intervalo para aguardar a estabilização do sistema
+  dht.begin(); //Inicializa o sensor DHT11
+  thing["dht11"] >> [](pson& out){
+    out["humidity"] = dht.readHumidity();
+    out["celsius"] = dht.readTemperature();
+  };
+
   pinMode(MOTOR1_PINO_POS,OUTPUT);  
   pinMode(MOTOR1_PINO_NEG,OUTPUT);
   pinMode(MOTOR2_PINO_POS,OUTPUT);
@@ -108,21 +137,5 @@ void setup() {
 
 void loop() {
   webSocket.loop();
-
-  /*frente();
-  delay(5000);
-  para();
-  delay(2000);
-  tras();
-  delay(5000);
-  para();
-  delay(2000);
-  direita();
-  delay(5000);
-  para();
-  delay(2000);
-  esquerda();
-  delay(5000);
-  para();
-  delay(2000);*/
+  thing.handle();
 }

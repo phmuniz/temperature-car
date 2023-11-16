@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("script carregado.");
     
-    let connection = new WebSocket("ws://192.168.0.13:81", ['arduino']);
+    let connection = new WebSocket("ws://10.0.0.101:81", ['arduino']);
 
     // escuta menssagem do ESP8266
     connection.onmessage = function(messageEvent) {

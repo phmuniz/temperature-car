@@ -1,1 +1,3 @@
 # temperature-car
+
+link thiger - https://console.thinger.io/dashboards/temperature?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfdGVtcGVyYXR1cmUiLCJzdnIiOiJ1cy1lYXN0LmF3cy50aGluZ2VyLmlvIiwidXNyIjoiZWR1YXJkb3NzYWxlbWUifQ.zCX-0A2VgD8mf6dBpJN-IncpZGFEKU-ap_IewPH6rT8

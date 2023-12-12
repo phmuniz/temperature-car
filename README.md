@@ -11,6 +11,8 @@ O projeto foi desenvolvido com o objetivo de criar uma forma de monitorar a temp
 Para monitorar a temperatura foi utilizado o thinger.io, que possui um dashboard com gráficos e medidas referentes a temperatura e a umidade. <br> Clique <a href="https://console.thinger.io/dashboards/temperature?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfdGVtcGVyYXR1cmUiLCJzdnIiOiJ1cy1lYXN0LmF3cy50aGluZ2VyLmlvIiwidXNyIjoiZWR1YXJkb3NzYWxlbWUifQ.zCX-0A2VgD8mf6dBpJN-IncpZGFEKU-ap_IewPH6rT8">aqui</a> para acessar o thinger. <br>
 Para controlar o carrinho foi desenvolvido uma aplicação web que chamamos de "control car". Esse site se conecta ao ESP8266 via IP da rede wifi, com a comunicação feita pelo web-socket. Abaixo, uma imagem de como ficou o frontend:
 
+<img src=".github/img-site.png">
+
 ## 3. Hardwares utilizados
 - ESP8266;
 - Ponte H;

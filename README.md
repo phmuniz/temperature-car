@@ -1,6 +1,6 @@
 # TEMPERATURE-CAR
 
-Sejam bem-vindos á página do nosso projeto! <br>
+Sejam bem-vindos à página do nosso projeto! <br>
 Este é um projeto desenvolvido para a disciplina de Projeto Integrado de Computação I, ministrada pelo professor Rodolfo da Silva Villaca. <br>
 O grupo é composto pelos alunos Eduardo Stein Saleme, Pedro Henrique Muniz Carvalho e Vitor Tome, do 2º período de Engenharia da Computação da Universidade Federal do Espírito Santo.
 
